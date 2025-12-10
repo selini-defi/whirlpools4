@@ -20,8 +20,8 @@ serde = ["dep:serde", "dep:serde_with", "dep:serde-big-array"]
 fetch = ["dep:solana-client", "dep:solana-account-decoder"]
 
 [dependencies]
-anchor-lang = { version = ">=0.31", optional = true }
-borsh = { version = "^1.0" }
+anchor-lang = { git = "https://github.com/coral-xyz/anchor.git", package = "anchor-lang", rev = "fa381028b6c28ab865644ac9ab02948ba30a89a2", optional = true}
+borsh = { version = "^0.10" }
 num-derive = { version = "^0.4" }
 num-traits = { version = "^0.2" }
 orca_whirlpools_core = { path = "../core", optional = true }
@@ -34,7 +34,8 @@ solana-account = { version = "^3" }
 solana-account-info = { version = "^3" }
 solana-program-error = { version = "^3" }
 solana-cpi = { version = "^3" }
-solana-program = { version = "^3" }
-solana-client = { version = "^3", optional = true }
-solana-account-decoder = { version = "^3", optional = true }
+solana-program = { version = "2.1.13" }
+solana-sdk = { version = "2.1.13", optional = true }
+solana-client = { version = "2.1.13", optional = true }
+solana-account-decoder = { version = "2.1.13", optional = true }
 thiserror = { version = "^2.0" }
